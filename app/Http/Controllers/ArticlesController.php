@@ -12,7 +12,8 @@ class ArticlesController extends Controller {
 	public function index(){
         /*$articles = Article::all();*/
       /*  $articles = Article::latest()->get();*/
-        $articles = Article::orderBy('created_at','DESC')->get();
+        /*$articles = Article::orderBy('published_at','DESC')->get();*/
+        $articles = Article::latest('published_at')->where('published_at','<=',Carbon::now())->orderBy('published_at','DESC')->get();
         return view('articles.index',compact('articles'));
     }
     public function show($id){
@@ -26,10 +27,10 @@ class ArticlesController extends Controller {
         return view('articles.create');
     }
     public function store(){
-        $input = Input::all();
-        $input['published_at'] = Carbon::now();
-        Article::create($input);
-
+/*        $input = Input::all();*/
+       /* $input['published_at'] = Carbon::now();*/
+        /*        Article::create($input);*/
+         Article::create(Request::all());
         return redirect('articles');
     }
 

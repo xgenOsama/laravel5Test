@@ -14,7 +14,11 @@
         {!! Form::textarea('content','',array('class'=>'form-control')) !!}
     </div>
     <div class="form-group">
-        {!! Form::submit('Add Article',['class' => 'btn btn-primary form-control']) !!}
+        {!! Form::label('published_at','Published_on:')!!}
+        {!! Form::input('date','published_at',date('Y-m-d'),array('class'=>'form-control'))!!}
     </div>
+    <div class="form-group">
+        {!! Form::submit('Add Article',['class' => 'btn btn-primary form-control']) !!}
+    </DIV>
     {!! Form::close() !!}
-@stop
+@STOP
