@@ -34,8 +34,8 @@
       <file leaf-file-name="ArticlesController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70616883" vertical-offset="0" max-vertical-offset="1131">
-              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.5649351" vertical-offset="0" max-vertical-offset="1160">
+              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -540,21 +540,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65909094" vertical-offset="29" max-vertical-offset="725">
-          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.5762987" vertical-offset="138" max-vertical-offset="928">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <marker date="1432177042240" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432177042240" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432177042240" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1432177042240" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432177845152" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1432177845152" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432177845152" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432177845152" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432177845152" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1432177845152" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70616883" vertical-offset="0" max-vertical-offset="1131">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.5649351" vertical-offset="0" max-vertical-offset="1160">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
           <folding />
         </state>
       </provider>

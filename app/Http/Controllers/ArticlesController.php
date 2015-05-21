@@ -13,7 +13,8 @@ class ArticlesController extends Controller {
         /*$articles = Article::all();*/
       /*  $articles = Article::latest()->get();*/
         /*$articles = Article::orderBy('published_at','DESC')->get();*/
-        $articles = Article::latest('published_at')->where('published_at','<=',Carbon::now())->orderBy('published_at','DESC')->get();
+     /*   $articles = Article::latest('published_at')->where('published_at','<=',Carbon::now())->orderBy('published_at','DESC')->get();*/
+        $articles = Article::latest('published_at')->published()->get();
         return view('articles.index',compact('articles'));
     }
     public function show($id){
