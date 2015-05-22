@@ -5,7 +5,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
+use Validator;
 use Input;
 
 class ArticlesController extends Controller {
@@ -28,14 +28,18 @@ class ArticlesController extends Controller {
     public function create(){
         return view('articles.create');
     }
-    public function store(Request $request){
+    public function store(){
 
             // validation .....
-        $this->validate($request ,['title' => 'required','content' =>'required']);
-        Article::create($request->all());
+        //    $this->validate($request ,['title' => 'required','content' =>'required']);
+        $rules = ['title'=>'required|min:3','content' => 'required'];
+     $validator =   Validator::make(Input::all(),$rules);
+        if($validator->passes()){
+        Article::create(Input::all());
          //Article::create(Request::all());
         return redirect('articles');
-
+        }
+        return redirect('articles/create')->withErrors($validator);
         /*        $input = Input::all();*/
         /* $input['published_at'] = Carbon::now();*/
         /*        Article::create($input);*/
