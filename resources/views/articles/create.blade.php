@@ -21,4 +21,12 @@
         {!! Form::submit('Add Article',['class' => 'btn btn-primary form-control']) !!}
     </DIV>
     {!! Form::close() !!}
-@STOP
+
+    @if($errors->any())
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    @endif
+    @STOP

@@ -4,7 +4,8 @@ use App\Article;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
-use Request;
+use Illuminate\Http\Request;
+
 use Input;
 
 class ArticlesController extends Controller {
@@ -27,12 +28,29 @@ class ArticlesController extends Controller {
     public function create(){
         return view('articles.create');
     }
-    public function store(){
-/*        $input = Input::all();*/
-       /* $input['published_at'] = Carbon::now();*/
-        /*        Article::create($input);*/
-         Article::create(Request::all());
+    public function store(Request $request){
+
+            // validation .....
+        $this->validate($request ,['title' => 'required','content' =>'required']);
+        Article::create($request->all());
+         //Article::create(Request::all());
         return redirect('articles');
+
+        /*        $input = Input::all();*/
+        /* $input['published_at'] = Carbon::now();*/
+        /*        Article::create($input);*/
     }
+    /*  public function store(Requests\CreateArticleRequest $request){
+
+        // validation .....
+
+        Article::create($request->all());
+        //Article::create(Request::all());
+        return redirect('articles');
+
+              $input = Input::all();*/
+        /* $input['published_at'] = Carbon::now();*/
+        /*        Article::create($input);
+    }*/
 
 }
