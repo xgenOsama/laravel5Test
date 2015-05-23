@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
         {!! Form::submit('Add Article',['class' => 'btn btn-primary form-control']) !!}
-    </DIV>
+    </div>
     {!! Form::close() !!}
 
     @if($errors->any())

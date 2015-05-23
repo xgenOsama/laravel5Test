@@ -44,6 +44,11 @@ class ArticlesController extends Controller {
         /* $input['published_at'] = Carbon::now();*/
         /*        Article::create($input);*/
     }
+
+    public  function  edit($id){
+        $article = Article::findOrFail($id );
+         return view('articles.edit')->with('article',$article);
+    }
     /*  public function store(Requests\CreateArticleRequest $request){
 
         // validation .....
