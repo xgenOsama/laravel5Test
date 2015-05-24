@@ -6,5 +6,6 @@
 
 
     <p>{{$article->content}}</p>
+    <p>{{$article->published_at}}</p>
 
 @stop

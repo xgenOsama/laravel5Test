@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         {!! Form::label('published_at','Published_on:')!!}
-        {!! Form::input('date','published_at',date('Y-m-d'),array('class'=>'form-control'))!!}
+        {!! Form::input('date','published_at',date($article->published_at),array('class'=>'form-control'))!!}
     </div>
     <div class="form-group">
         {!! Form::submit('Edit Article',['class' => 'btn btn-primary form-control']) !!}

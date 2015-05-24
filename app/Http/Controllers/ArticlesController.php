@@ -49,6 +49,15 @@ class ArticlesController extends Controller {
         $article = Article::findOrFail($id );
          return view('articles.edit')->with('article',$article);
     }
+
+    public  function  update($id){
+        $article = Article::findOrFail($id);
+        $article->title = Input::get('title');
+        $article->content = Input::get('content');
+        $article->published_at = Input::get('published_at');
+        $article->save();
+        return redirect("articles"."\\$id");
+    }
     /*  public function store(Requests\CreateArticleRequest $request){
 
         // validation .....
