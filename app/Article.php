@@ -25,4 +25,10 @@ class Article extends Model {
     public function scopeUnpublished($query){
         $query->where('published_at','>=',Carbon::now());
     }
+
+
+    public  function user(){
+        return $this->belongsTo('User');
+    }
+
 }

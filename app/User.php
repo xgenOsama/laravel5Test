@@ -13,6 +13,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	/**
 	 * The database table used by the model.
 	 *
+     * a user can have many articles
 	 * @var string
 	 */
 	protected $table = 'users';
@@ -30,5 +31,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 * @var array
 	 */
 	protected $hidden = ['password', 'remember_token'];
+
+
+    public  function articles(){
+        return $this->hasMany('Article');
+    }
 
 }
